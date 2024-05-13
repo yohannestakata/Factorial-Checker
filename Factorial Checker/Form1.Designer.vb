@@ -28,6 +28,7 @@ Partial Class Form1
         TextBox2 = New TextBox()
         Button1 = New Button()
         Label3 = New Label()
+        Label4 = New Label()
         SuspendLayout()
         ' 
         ' TextBox1
@@ -67,7 +68,7 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(278, 203)
+        Button1.Location = New Point(278, 158)
         Button1.Name = "Button1"
         Button1.Size = New Size(112, 34)
         Button1.TabIndex = 4
@@ -84,11 +85,22 @@ Partial Class Form1
         Label3.TabIndex = 5
         Label3.Text = "Factorial Calculator"
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.BackColor = Color.DarkRed
+        Label4.ForeColor = Color.FromArgb(CByte(255), CByte(192), CByte(192))
+        Label4.Location = New Point(12, 416)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(0, 25)
+        Label4.TabIndex = 6
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Button1)
         Controls.Add(TextBox2)
@@ -107,5 +119,6 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 
 End Class

@@ -6,17 +6,23 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim input As String = TextBox1.Text
         Dim result As String
+        Dim err As String = ""
 
         If IsNumeric(input) Then
-            Dim number As Integer = CInt(input)
+            Dim number As Integer = Integer.Parse(input)
             If number < 0 Then
-                result = "Factorial is not defined by negatives."
+                err = "Error: Factorial is not defined by negatives."
+                result = "Err"
             Else
                 result = CalculateFactorial(number).ToString()
             End If
-
-            TextBox2.Text = result
+        Else
+            err = "Error: Factorial is not defined by alphabets."
+            result = "Err"
         End If
+
+        TextBox2.Text = result
+        Label4.Text = err
     End Sub
 
     Private Function CalculateFactorial(number As Integer) As Long
